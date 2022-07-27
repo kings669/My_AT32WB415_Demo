@@ -25,6 +25,17 @@
 ".\objects\at32wb415_wwdt.o"
 ".\objects\system_at32wb415.o"
 ".\objects\startup_at32wb415.o"
+".\objects\led_task.o"
+".\objects\start_task.o"
+".\objects\croutine.o"
+".\objects\event_groups.o"
+".\objects\list.o"
+".\objects\queue.o"
+".\objects\stream_buffer.o"
+".\objects\tasks.o"
+".\objects\timers.o"
+".\objects\heap_4.o"
+".\objects\port.o"
 --strict --scatter ".\Objects\My_AT32_Demo.sct"
 --summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
 --info sizes --info totals --info unused --info veneers
