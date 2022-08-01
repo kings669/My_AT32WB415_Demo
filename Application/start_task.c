@@ -3,6 +3,7 @@
 #include "task.h"
 
 #include "led_task.h"
+#include "adc_task.h"
 
 #define START_TASK_PRIO 1
 #define START_STK_SIZE 1024
@@ -23,6 +24,14 @@ TaskHandle_t LED2Task_Handler;
 //任务句柄
 TaskHandle_t LED3Task_Handler;
 
+
+//任务优先级
+#define ADC_TASK_PRIO		5
+//任务堆栈大小	
+#define ADC_STK_SIZE 		256
+//任务句柄
+TaskHandle_t ADCTask_Handler;
+
 void start_task(void *pvParameters)
 {
 		taskENTER_CRITICAL();
@@ -38,7 +47,12 @@ void start_task(void *pvParameters)
                 (void*          )NULL,				
                 (UBaseType_t    )LED3_TASK_PRIO,	
                 (TaskHandle_t*  )&LED3Task_Handler);						
-							
+		xTaskCreate((TaskFunction_t )Adc_Task,     	
+                (const char*    )"Adc_Task",   	
+                (uint16_t       )ADC_STK_SIZE, 
+                (void*          )NULL,				
+                (UBaseType_t    )ADC_TASK_PRIO,	
+                (TaskHandle_t*  )&ADCTask_Handler);
 								
     vTaskDelete(StartTask_Handler); //删除开始任务
 							

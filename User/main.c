@@ -29,6 +29,7 @@
 #include "start_task.h"
 #include "FreeRTOS.h"
 #include "task.h"
+#include "bsp_adc.h"
 
 /**
   * @brief  main function.
@@ -45,6 +46,11 @@ int main(void)
 	
 	at32_led_init(LED2);
   at32_led_init(LED3);
+	
+	uart_print_init(115200);
+	
+	adc1_config();
+	dma_config();
 
 	startTask();
 	vTaskStartScheduler();
