@@ -5,7 +5,8 @@
 
 ## 使用说明
 
-*此处将会在`电子工程世界`发布* 
+*此处将会在`电子工程世界`发布*   
+[1、雅特力AT32WB415系列蓝牙BLE 5.0 MCU】在FreeRTOS中点灯，所有代码，Github长期更新](http://bbs.eeworld.com.cn/thread-1212321-1-1.html)
              
 ## 文件夹说明
 - Bsp BSP相关文件
