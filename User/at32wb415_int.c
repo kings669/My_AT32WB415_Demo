@@ -26,6 +26,21 @@
 
 /* includes ------------------------------------------------------------------*/
 #include "at32wb415_int.h"
+#include "string.h"
+#include "at_cmd.h"
+#include "tp_mode.h"
+#define MAX_RX_LENGTH                    (128)
+
+flag_status recv_cmp_flag = RESET;
+char recv_data[MAX_RX_LENGTH] = {0};
+
+extern cmd_rsp_status cmd_result;
+extern cmd_flash_read_status fr_flag;
+extern uint8_t bt_flash_data;
+extern uartstruct tp_mode_rx_uart;
+extern uartstruct tp_mode_tx_uart;
+extern flag_status UART_TP_MODE;
+extern flag_status switch_mode_flag;
 
 /** @addtogroup AT32WB415_periph_template
   * @{
@@ -131,6 +146,75 @@ void DebugMon_Handler(void)
 //void SysTick_Handler(void)
 //{
 //}
+
+
+void USART2_IRQHandler(void)
+{
+  uint16_t res;
+  if(usart_flag_get(USART2, USART_RDBF_FLAG) != RESET)
+  {
+    res = usart_data_receive(USART2);
+    if(tp_mode_tx_uart.count > (USART_RECV_LEN - 1))
+    {
+      tp_mode_tx_uart.count = 0;
+      tp_mode_tx_uart.head = 0;
+      tp_mode_tx_uart.tail = 0;
+    }			
+    else
+    {
+      tp_mode_tx_uart.count++;
+      tp_mode_tx_uart.buf[tp_mode_tx_uart.head++] = res;
+      if(tp_mode_tx_uart.head > (USART_RECV_LEN - 1))
+      {
+        tp_mode_tx_uart.head = 0;
+      }
+    }
+  }
+}
+
+void USART3_IRQHandler(void)
+{
+  if(UART_TP_MODE && switch_mode_flag == RESET)
+  {
+    uint16_t res;
+    if(usart_flag_get(USART3, USART_RDBF_FLAG) != RESET)
+    {
+      res = usart_data_receive(USART3);
+      if(tp_mode_rx_uart.count > (USART_RECV_LEN - 1))
+      {
+        tp_mode_rx_uart.count = 0;
+        tp_mode_rx_uart.head = 0;
+        tp_mode_rx_uart.tail = 0;
+      }			
+      else
+      {
+        tp_mode_rx_uart.count++;
+        tp_mode_rx_uart.buf[tp_mode_rx_uart.head++] = res;
+        if(tp_mode_rx_uart.head > (USART_RECV_LEN - 1))
+        {
+          tp_mode_rx_uart.head = 0;
+        }
+      }
+    }
+  }
+  else
+  {
+    static int i = 0;
+    uint8_t c;
+    
+    if(usart_flag_get(USART3, USART_RDBF_FLAG) != RESET)
+    {
+      c = usart_data_receive(USART3);        
+      recv_data[i++] = c;
+      
+      if(c == '\n')
+      {
+        recv_cmp_flag = SET;
+        i = 0;
+      }
+    }
+  }
+}
 
 /**
   * @}

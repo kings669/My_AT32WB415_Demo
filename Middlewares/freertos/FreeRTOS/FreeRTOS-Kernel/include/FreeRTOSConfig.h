@@ -110,14 +110,15 @@
  * See http://www.freertos.org/a00110.html.
  *----------------------------------------------------------*/
 #define configUSE_PREEMPTION		1
+#define configUSE_TIME_SLICING  1   //1使能时间片调度(默认式使能的)
 #define configUSE_IDLE_HOOK			0
 #define configUSE_TICK_HOOK			0
 #define configCPU_CLOCK_HZ			( ( unsigned long ) systemcoreclock )
 #define configTICK_RATE_HZ			( ( TickType_t ) 1000 )
-#define configMAX_PRIORITIES		( 5 )
+#define configMAX_PRIORITIES		( 16 )
 #define configMINIMAL_STACK_SIZE	( ( unsigned short ) 128 )
 #define configSUPPORT_DYNAMIC_ALLOCATION        1
-#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 8 * 1024 ) )
+#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 12 * 1024 ) )
 #define configMAX_TASK_NAME_LEN		( 16 )
 #define configUSE_16_BIT_TICKS		0
 #define configIDLE_SHOULD_YIELD		1

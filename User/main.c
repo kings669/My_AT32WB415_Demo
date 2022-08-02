@@ -30,6 +30,7 @@
 #include "FreeRTOS.h"
 #include "task.h"
 #include "bsp_adc.h"
+#include "bsp_usart.h"
 
 /**
   * @brief  main function.
@@ -39,15 +40,19 @@
 int main(void)
 {
 	nvic_priority_group_config(NVIC_PRIORITY_GROUP_4);
+	nvic_irq_enable(USART2_IRQn, 0, 1);
 	
   system_clock_config();
 
   at32_board_init();
+	at32_button_init();
 	
 	at32_led_init(LED2);
   at32_led_init(LED3);
+	at32_led_init(LED4);
 	
-	uart_print_init(115200);
+	uart_print_init(115200);//usart2
+	usart3_init(115200);//usart3
 	
 	adc1_config();
 	dma_config();

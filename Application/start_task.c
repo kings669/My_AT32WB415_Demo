@@ -4,6 +4,8 @@
 
 #include "led_task.h"
 #include "adc_task.h"
+#include "at_task.h"
+
 
 #define START_TASK_PRIO 1
 #define START_STK_SIZE 1024
@@ -32,6 +34,13 @@ TaskHandle_t LED3Task_Handler;
 //任务句柄
 TaskHandle_t ADCTask_Handler;
 
+//任务优先级
+#define AT_TASK_PRIO		3
+//任务堆栈大小	
+#define AT_STK_SIZE 		512
+//任务句柄
+TaskHandle_t ATTask_Handler;
+
 void start_task(void *pvParameters)
 {
 		taskENTER_CRITICAL();
@@ -47,11 +56,17 @@ void start_task(void *pvParameters)
                 (void*          )NULL,				
                 (UBaseType_t    )LED3_TASK_PRIO,	
                 (TaskHandle_t*  )&LED3Task_Handler);						
-		xTaskCreate((TaskFunction_t )Adc_Task,     	
-                (const char*    )"Adc_Task",   	
-                (uint16_t       )ADC_STK_SIZE, 
+//		xTaskCreate((TaskFunction_t )Adc_Task,     	
+//                (const char*    )"Adc_Task",   	
+//                (uint16_t       )ADC_STK_SIZE, 
+//                (void*          )NULL,				
+//                (UBaseType_t    )ADC_TASK_PRIO,	
+//                (TaskHandle_t*  )&ADCTask_Handler);
+		xTaskCreate((TaskFunction_t )AT_Task,     	
+                (const char*    )"AT_Task",   	
+                (uint16_t       )AT_STK_SIZE, 
                 (void*          )NULL,				
-                (UBaseType_t    )ADC_TASK_PRIO,	
+                (UBaseType_t    )AT_TASK_PRIO,	
                 (TaskHandle_t*  )&ADCTask_Handler);
 								
     vTaskDelete(StartTask_Handler); //删除开始任务

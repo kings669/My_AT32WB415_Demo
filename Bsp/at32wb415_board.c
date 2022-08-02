@@ -26,7 +26,8 @@
   */
 
 #include "at32wb415_board.h"
-
+#include "FreeRTOS.h"
+#include "task.h"
 /** @addtogroup AT32WB415_board
   * @{
   */
@@ -173,6 +174,7 @@ void at32_button_init(void)
   gpio_init_struct.gpio_pins = USER_BUTTON_PIN;
   gpio_init_struct.gpio_pull = GPIO_PULL_UP;
   gpio_init(USER_BUTTON_PORT, &gpio_init_struct);
+	
 }
 
 /**
@@ -198,7 +200,12 @@ button_type at32_button_press()
   {
     /* debounce */
     pressed = 0;
-    delay_ms(10);
+		#if USE_RTOS
+			vTaskDelay(10);
+		#else
+			delay_ms(10);
+		#endif
+		
     if(at32_button_state() == RESET)
       return USER_BUTTON;
   }
