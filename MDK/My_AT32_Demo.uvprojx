@@ -339,7 +339,7 @@
               <MiscControls></MiscControls>
               <Define>AT32WB415CCU7_7,USE_STDPERIPH_DRIVER,AT_START_WB415_V1,USE_RTOS</Define>
               <Undefine></Undefine>
-              <IncludePath>..\Bsp;..\Drivers\CMSIS\cm4\device_support;..\Drivers\AT32_Driver\inc;..\User;..\Drivers\CMSIS\cm4\core_support;..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\include;..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\portable\RVDS\ARM_CM3;..\Application</IncludePath>
+              <IncludePath>..\Bsp;..\Drivers\CMSIS\cm4\device_support;..\Drivers\AT32_Driver\inc;..\User;..\Drivers\CMSIS\cm4\core_support;..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\include;..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\portable\RVDS\ARM_CM3;..\Application;..\Middlewares\usb\usb_drivers\inc;..\Middlewares\usb\usbd_class\cdc</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -427,6 +427,51 @@
               <FileName>bsp_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Bsp\bsp_usart.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Application</GroupName>
+          <Files>
+            <File>
+              <FileName>start_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Application\start_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>led_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Application\led_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>adc_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Application\adc_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>at_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Application\at_task.c</FilePath>
+            </File>
+            <File>
+              <FileName>usb_task.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Application\usb_task.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Cmsis</GroupName>
+          <Files>
+            <File>
+              <FileName>system_at32wb415.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\CMSIS\cm4\device_support\system_at32wb415.c</FilePath>
+            </File>
+            <File>
+              <FileName>startup_at32wb415.s</FileName>
+              <FileType>2</FileType>
+              <FilePath>..\Drivers\CMSIS\cm4\device_support\startup\mdk\startup_at32wb415.s</FilePath>
             </File>
           </Files>
         </Group>
@@ -536,46 +581,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Cmsis</GroupName>
-          <Files>
-            <File>
-              <FileName>system_at32wb415.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Drivers\CMSIS\cm4\device_support\system_at32wb415.c</FilePath>
-            </File>
-            <File>
-              <FileName>startup_at32wb415.s</FileName>
-              <FileType>2</FileType>
-              <FilePath>..\Drivers\CMSIS\cm4\device_support\startup\mdk\startup_at32wb415.s</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
-          <GroupName>Application</GroupName>
-          <Files>
-            <File>
-              <FileName>start_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\start_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>led_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\led_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>adc_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\adc_task.c</FilePath>
-            </File>
-            <File>
-              <FileName>at_task.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\Application\at_task.c</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Middlewares/FreeRTOS</GroupName>
           <Files>
             <File>
@@ -622,6 +627,41 @@
               <FileName>port.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\portable\RVDS\ARM_CM3\port.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Middlewares/USB_Driver</GroupName>
+          <Files>
+            <File>
+              <FileName>usb_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\usb\usb_drivers\src\usb_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_core.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\usb\usb_drivers\src\usbd_core.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_int.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\usb\usb_drivers\src\usbd_int.c</FilePath>
+            </File>
+            <File>
+              <FileName>usbd_sdr.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\usb\usb_drivers\src\usbd_sdr.c</FilePath>
+            </File>
+            <File>
+              <FileName>cdc_class.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\usb\usbd_class\cdc\cdc_class.c</FilePath>
+            </File>
+            <File>
+              <FileName>cdc_desc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Middlewares\usb\usbd_class\cdc\cdc_desc.c</FilePath>
             </File>
           </Files>
         </Group>

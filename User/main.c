@@ -31,6 +31,7 @@
 #include "task.h"
 #include "bsp_adc.h"
 #include "bsp_usart.h"
+#include "usb_task.h"
 
 /**
   * @brief  main function.
@@ -57,6 +58,8 @@ int main(void)
 	adc1_config();
 	dma_config();
 
+	usb_cdc_init();
+	
 	startTask();
 	vTaskStartScheduler();
   while(1)
