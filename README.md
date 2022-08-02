@@ -6,8 +6,9 @@
 ## 使用说明
 
 *此处将会在`电子工程世界`发布*   
-[1、雅特力AT32WB415系列蓝牙BLE 5.0 MCU】在FreeRTOS中点灯，所有代码，Github长期更新](http://bbs.eeworld.com.cn/thread-1212321-1-1.html)
-             
+[1、【雅特力AT32WB415系列蓝牙BLE 5.0 MCU】在FreeRTOS中点灯，所有代码，Github长期更新](http://bbs.eeworld.com.cn/thread-1212321-1-1.html)
+
+[2、【雅特力AT32WB415系列蓝牙BLE 5.0 MCU】在FreeRTOS中ADC采集温度传感器](http://bbs.eeworld.com.cn/thread-1212847-1-1.html)
 ## 文件夹说明
 - Bsp BSP相关文件
 - Drivers 驱动相关文件（AT32固件库及CMSIS）
@@ -16,6 +17,7 @@
 - User 用户文件夹
 - Application 应用层文件夹
 - Doc 存放相关文档资料
+- Firmware 编译好的固件
 ## 相关仓库及资源
 [基于Arm® Cortex® -M4内核微控制器, 采用蓝牙BLE 5.0低功耗, 适用于高效信号处理应用](https://www.arterytek.com/cn/product/AT32WB415.jsp#Resource)
 ## 维护者
