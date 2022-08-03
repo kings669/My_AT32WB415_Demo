@@ -33,7 +33,7 @@ struct at_cmd_msg at_cmd_list[] =
 button_type BUTTON;
 void AT_Task(void *pvParameters)
 {
-	 printf("AT-Task Start!!\r\n");
+	printf("AT-Task Start!!\r\n");
 	while(1){
 	
 		if(at32_button_press() == USER_BUTTON)

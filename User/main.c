@@ -32,6 +32,8 @@
 #include "bsp_adc.h"
 #include "bsp_usart.h"
 #include "usb_task.h"
+#include "bsp_pwm.h"
+#include "bsp_wdt.h"
 
 /**
   * @brief  main function.
@@ -50,7 +52,8 @@ int main(void)
 	
 	at32_led_init(LED2);
   at32_led_init(LED3);
-	at32_led_init(LED4);
+	//at32_led_init(LED4);
+	led4_pwm_init();
 	
 	uart_print_init(115200);//usart2
 	usart3_init(115200);//usart3
@@ -60,6 +63,8 @@ int main(void)
 
 	usb_cdc_init();
 	
+	wdt_init();
+
 	startTask();
 	vTaskStartScheduler();
   while(1)

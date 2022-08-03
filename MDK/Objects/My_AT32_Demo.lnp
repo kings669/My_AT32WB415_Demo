@@ -8,6 +8,7 @@
 ".\objects\bsp_adc.o"
 ".\objects\bsp_usart.o"
 ".\objects\bsp_pwm.o"
+".\objects\bsp_wdt.o"
 ".\objects\start_task.o"
 ".\objects\led_task.o"
 ".\objects\adc_task.o"

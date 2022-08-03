@@ -62,12 +62,12 @@ void start_task(void *pvParameters)
 //                (void*          )NULL,				
 //                (UBaseType_t    )ADC_TASK_PRIO,	
 //                (TaskHandle_t*  )&ADCTask_Handler);
-		xTaskCreate((TaskFunction_t )AT_Task,     	
-                (const char*    )"AT_Task",   	
-                (uint16_t       )AT_STK_SIZE, 
-                (void*          )NULL,				
-                (UBaseType_t    )AT_TASK_PRIO,	
-                (TaskHandle_t*  )&ADCTask_Handler);
+//		xTaskCreate((TaskFunction_t )AT_Task,     	
+//                (const char*    )"AT_Task",   	
+//                (uint16_t       )AT_STK_SIZE, 
+//                (void*          )NULL,				
+//                (UBaseType_t    )AT_TASK_PRIO,	
+//                (TaskHandle_t*  )&ADCTask_Handler);
 								
     vTaskDelete(StartTask_Handler); //删除开始任务
 							
