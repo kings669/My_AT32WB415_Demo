@@ -12,6 +12,12 @@
 
 [3、【雅特力AT32WB415系列蓝牙BLE 5.0 MCU】移植MCU控制蓝牙，蓝牙固件烧录](http://bbs.eeworld.com.cn/thread-1213064-1-1.html)
 
+[4、【雅特力AT32WB415系列蓝牙BLE 5.0 MCU】USB CDC 串口Printf打印调试信息](http://bbs.eeworld.com.cn/thread-1213098-1-1.html)
+
+[5、【雅特力AT32WB415系列蓝牙BLE 5.0 MCU】PWM 呼吸灯](http://bbs.eeworld.com.cn/thread-1213182-1-1.html)
+
+[6、【雅特力AT32WB415系列蓝牙BLE 5.0 MCU】WDT 看门狗分析及应用](http://bbs.eeworld.com.cn/thread-1213246-1-1.html)
+
 ## 文件夹说明
 - Bsp BSP相关文件
 - Drivers 驱动相关文件（AT32固件库及CMSIS）
