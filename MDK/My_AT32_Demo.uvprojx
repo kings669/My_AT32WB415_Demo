@@ -428,6 +428,11 @@
               <FileType>1</FileType>
               <FilePath>..\Bsp\bsp_usart.c</FilePath>
             </File>
+            <File>
+              <FileName>bsp_pwm.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Bsp\bsp_pwm.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>

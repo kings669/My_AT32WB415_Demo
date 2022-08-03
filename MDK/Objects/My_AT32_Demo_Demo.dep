@@ -67,7 +67,7 @@ I (..\Drivers\AT32_Driver\inc\at32wb415_usb.h)(0x62E79CDC)
 I (D:\Keil\ARM\ARMCC\include\string.h)(0x6025237E)
 I (..\User\at_cmd.h)(0x62A6D6F1)
 I (..\User\tp_mode.h)(0x62A6CDAE)
-F (..\User\main.c)(0x62E8DF4D)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections -I ..\Bsp -I ..\Drivers\CMSIS\cm4\device_support -I ..\Drivers\AT32_Driver\inc -I ..\User -I ..\Drivers\CMSIS\cm4\core_support -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\include -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\portable\RVDS\ARM_CM3 -I ..\Application -I ..\Middlewares\usb\usb_drivers\inc -I ..\Middlewares\usb\usbd_class\cdc-ID:\Keil\Packs\ArteryTek\AT32WB415_DFP\2.0.2\Device\Include-D__UVISION_VERSION="537" -DAT32WB415CCU7_7 -DAT32WB415CCU7_7 -DUSE_STDPERIPH_DRIVER -DAT_START_WB415_V1 -DUSE_RTOS-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
+F (..\User\main.c)(0x62E9F3D3)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections -I ..\Bsp -I ..\Drivers\CMSIS\cm4\device_support -I ..\Drivers\AT32_Driver\inc -I ..\User -I ..\Drivers\CMSIS\cm4\core_support -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\include -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\portable\RVDS\ARM_CM3 -I ..\Application -I ..\Middlewares\usb\usb_drivers\inc -I ..\Middlewares\usb\usbd_class\cdc-ID:\Keil\Packs\ArteryTek\AT32WB415_DFP\2.0.2\Device\Include-D__UVISION_VERSION="537" -DAT32WB415CCU7_7 -DAT32WB415CCU7_7 -DUSE_STDPERIPH_DRIVER -DAT_START_WB415_V1 -DUSE_RTOS-o .\objects\main.o --omf_browse .\objects\main.crf --depend .\objects\main.d)
 I (..\Bsp\at32wb415_board.h)(0x62E79CDC)
 I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x60252374)
 I (..\Drivers\CMSIS\cm4\device_support\at32wb415.h)(0x62E79CDC)
@@ -122,6 +122,7 @@ I (..\Middlewares\usb\usb_drivers\inc\usbd_core.h)(0x62BAD2F8)
 I (..\Middlewares\usb\usb_drivers\inc\usbd_int.h)(0x62BAD2F8)
 I (..\Middlewares\usb\usbd_class\cdc\cdc_class.h)(0x62BAD2E6)
 I (..\Middlewares\usb\usbd_class\cdc\cdc_desc.h)(0x62BAD2E7)
+I (..\Bsp\bsp_pwm.h)(0x62E9F3BD)
 F (..\User\at_cmd.c)(0x62E7B476)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections -I ..\Bsp -I ..\Drivers\CMSIS\cm4\device_support -I ..\Drivers\AT32_Driver\inc -I ..\User -I ..\Drivers\CMSIS\cm4\core_support -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\include -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\portable\RVDS\ARM_CM3 -I ..\Application -I ..\Middlewares\usb\usb_drivers\inc -I ..\Middlewares\usb\usbd_class\cdc-ID:\Keil\Packs\ArteryTek\AT32WB415_DFP\2.0.2\Device\Include-D__UVISION_VERSION="537" -DAT32WB415CCU7_7 -DAT32WB415CCU7_7 -DUSE_STDPERIPH_DRIVER -DAT_START_WB415_V1 -DUSE_RTOS-o .\objects\at_cmd.o --omf_browse .\objects\at_cmd.crf --depend .\objects\at_cmd.d)
 I (..\User\at_cmd.h)(0x62A6D6F1)
 I (..\Drivers\CMSIS\cm4\device_support\at32wb415.h)(0x62E79CDC)
@@ -303,6 +304,40 @@ I (..\Drivers\AT32_Driver\inc\at32wb415_exint.h)(0x62E79CDC)
 I (..\Drivers\AT32_Driver\inc\at32wb415_misc.h)(0x62E79CDC)
 I (..\Drivers\AT32_Driver\inc\at32wb415_usb.h)(0x62E79CDC)
 I (..\User\at32wb415_clock.h)(0x62E79CDC)
+F (..\Bsp\bsp_pwm.c)(0x62E9F3AE)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections -I ..\Bsp -I ..\Drivers\CMSIS\cm4\device_support -I ..\Drivers\AT32_Driver\inc -I ..\User -I ..\Drivers\CMSIS\cm4\core_support -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\include -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\portable\RVDS\ARM_CM3 -I ..\Application -I ..\Middlewares\usb\usb_drivers\inc -I ..\Middlewares\usb\usbd_class\cdc-ID:\Keil\Packs\ArteryTek\AT32WB415_DFP\2.0.2\Device\Include-D__UVISION_VERSION="537" -DAT32WB415CCU7_7 -DAT32WB415CCU7_7 -DUSE_STDPERIPH_DRIVER -DAT_START_WB415_V1 -DUSE_RTOS-o .\objects\bsp_pwm.o --omf_browse .\objects\bsp_pwm.crf --depend .\objects\bsp_pwm.d)
+I (..\Bsp\bsp_pwm.h)(0x62E9F3BD)
+I (D:\Keil\ARM\ARMCC\include\stdio.h)(0x60252374)
+I (..\Drivers\CMSIS\cm4\device_support\at32wb415.h)(0x62E79CDC)
+I (..\Drivers\CMSIS\cm4\core_support\core_cm4.h)(0x62E79CDC)
+I (D:\Keil\ARM\ARMCC\include\stdint.h)(0x6025237E)
+I (..\Drivers\CMSIS\cm4\core_support\cmsis_version.h)(0x62E79CDC)
+I (..\Drivers\CMSIS\cm4\core_support\cmsis_compiler.h)(0x62E79CDC)
+I (..\Drivers\CMSIS\cm4\core_support\cmsis_armcc.h)(0x62E79CDC)
+I (..\Drivers\CMSIS\cm4\core_support\mpu_armv7.h)(0x62E79CDC)
+I (..\Drivers\CMSIS\cm4\device_support\system_at32wb415.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_def.h)(0x62E79CDC)
+I (..\User\at32wb415_conf.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_crm.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_cmp.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_tmr.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_ertc.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_gpio.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_i2c.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_usart.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_pwc.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_can.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_adc.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_spi.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_dma.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_debug.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_flash.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_crc.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_wwdt.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_wdt.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_exint.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_misc.h)(0x62E79CDC)
+I (..\Drivers\AT32_Driver\inc\at32wb415_usb.h)(0x62E79CDC)
+I (..\User\at32wb415_clock.h)(0x62E79CDC)
 F (..\Application\start_task.c)(0x62E7D52E)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections -I ..\Bsp -I ..\Drivers\CMSIS\cm4\device_support -I ..\Drivers\AT32_Driver\inc -I ..\User -I ..\Drivers\CMSIS\cm4\core_support -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\include -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\portable\RVDS\ARM_CM3 -I ..\Application -I ..\Middlewares\usb\usb_drivers\inc -I ..\Middlewares\usb\usbd_class\cdc-ID:\Keil\Packs\ArteryTek\AT32WB415_DFP\2.0.2\Device\Include-D__UVISION_VERSION="537" -DAT32WB415CCU7_7 -DAT32WB415CCU7_7 -DUSE_STDPERIPH_DRIVER -DAT_START_WB415_V1 -DUSE_RTOS-o .\objects\start_task.o --omf_browse .\objects\start_task.crf --depend .\objects\start_task.d)
 I (..\Application\start_task.h)(0x62E79CDC)
 I (..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\include\FreeRTOS.h)(0x62E79CDC)
@@ -350,7 +385,7 @@ I (..\Drivers\AT32_Driver\inc\at32wb415_misc.h)(0x62E79CDC)
 I (..\Drivers\AT32_Driver\inc\at32wb415_usb.h)(0x62E79CDC)
 I (..\Application\at_task.h)(0x62E7B6E9)
 I (..\User\at32wb415_clock.h)(0x62E79CDC)
-F (..\Application\led_task.c)(0x62E8E193)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections -I ..\Bsp -I ..\Drivers\CMSIS\cm4\device_support -I ..\Drivers\AT32_Driver\inc -I ..\User -I ..\Drivers\CMSIS\cm4\core_support -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\include -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\portable\RVDS\ARM_CM3 -I ..\Application -I ..\Middlewares\usb\usb_drivers\inc -I ..\Middlewares\usb\usbd_class\cdc-ID:\Keil\Packs\ArteryTek\AT32WB415_DFP\2.0.2\Device\Include-D__UVISION_VERSION="537" -DAT32WB415CCU7_7 -DAT32WB415CCU7_7 -DUSE_STDPERIPH_DRIVER -DAT_START_WB415_V1 -DUSE_RTOS-o .\objects\led_task.o --omf_browse .\objects\led_task.crf --depend .\objects\led_task.d)
+F (..\Application\led_task.c)(0x62E9F59E)(-c --cpu Cortex-M4 -g -O0 --apcs=interwork --split_sections -I ..\Bsp -I ..\Drivers\CMSIS\cm4\device_support -I ..\Drivers\AT32_Driver\inc -I ..\User -I ..\Drivers\CMSIS\cm4\core_support -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\include -I ..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\portable\RVDS\ARM_CM3 -I ..\Application -I ..\Middlewares\usb\usb_drivers\inc -I ..\Middlewares\usb\usbd_class\cdc-ID:\Keil\Packs\ArteryTek\AT32WB415_DFP\2.0.2\Device\Include-D__UVISION_VERSION="537" -DAT32WB415CCU7_7 -DAT32WB415CCU7_7 -DUSE_STDPERIPH_DRIVER -DAT_START_WB415_V1 -DUSE_RTOS-o .\objects\led_task.o --omf_browse .\objects\led_task.crf --depend .\objects\led_task.d)
 I (..\Application\led_task.h)(0x62E79CDC)
 I (..\Middlewares\freertos\FreeRTOS\FreeRTOS-Kernel\include\FreeRTOS.h)(0x62E79CDC)
 I (D:\Keil\ARM\ARMCC\include\stddef.h)(0x6025237E)
